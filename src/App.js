@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import "../src/styles/partials/_globals.scss";
+import "../src/styles/partials/_mixins.scss";
+import "../src/styles/partials/_typography.scss";
+
+import Header from './components/Header/Header';
+// import Video from './components/Video/Video';
+// import VideoDescription from './components/VideoDescription/VideoDescription';
+// import Form from './components/Form/Form';
+// import VideoQueue from './components/VideoQueue/VideoQueue'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      {/* <Video /> */}
+      {/* <VideoDescription /> */}
+      {/* <Form /> */}
+      {/* <VideoQueue /> */}
     </div>
   );
 }

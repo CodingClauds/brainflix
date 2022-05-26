@@ -1,3 +1,16 @@
+// @use "../../assets/Font/"
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'AvenirNext', sans-serif;
+}
+
 // --------------------------- Variables ------------------>
 
 // Primary Colours
@@ -22,8 +35,6 @@ $color-alabaster: #FAFAFA;
 // Padding before headlines: 24px
 // Padding after headlines: 16px
 // Padding between components: 16px
-
-
 
 
 $mobile-padding-16px: 1rem;
