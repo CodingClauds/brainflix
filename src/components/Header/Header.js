@@ -15,9 +15,7 @@ function Header() {
 
             <div className="header__search-box">
                 {/* background the search img in styles */}
-              <form className="header__form">
                 <input className="header__search" src={searchIcon} type="text" placeholder='Search'/>
-              </form>
                 
               <div className="header__avatar-box">
                 <img className='header__user-logo' src={userLogo} alt="user profile with someones photo"/>
