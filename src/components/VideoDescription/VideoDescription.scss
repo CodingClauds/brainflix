@@ -1,0 +1,9 @@
+@use '../../styles/partials/_globals.scss' as *;
+
+.vid-info__section {
+    padding: 0 16px;
+
+    &__item {
+        list-style-type: none;
+    }        
+}

@@ -9,6 +9,10 @@ body {
     font-family: 'AvenirNext LT Pro', sans-serif;
 }
 
+li {
+    list-style-type: none;
+}
+
 // --------------------------- Variables ------------------>
 
 // Primary Colours
@@ -42,8 +46,38 @@ $tablet-padding-36px: 2.25rem;
 $desktop-padding-48px: 3rem;
 
 
-$tablet-breakpoint: 768px;
-$desktop-breakpoint: 1280px;  
-
-
 // --------------------------- Variables ------------------>
+
+
+// --------------------------- Mixins ------------------>
+
+@mixin tablet {
+    @media screen and (min-width: 768px){
+        @content;   
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1280px){
+        @content;   
+    }
+}
+
+@mixin button {
+    width: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 1em;
+    margin: 1em 0;
+    color: $color-white;
+    border: none;
+    border-radius: 5px;
+}
+
+@mixin avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+// --------------------------- Mixins ------------------>

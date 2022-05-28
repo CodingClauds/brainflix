@@ -10,17 +10,17 @@ export default function VideoDescription({ selectedVideo }) {
                 <h1 className = "vid-info__title">{selectedVideo.title}</h1>
                 
                 <ul className = "vid-info__list">
-                    <li className = 'vid-info__artist'>{selectedVideo.channel}</li>
+                    <li className = 'vid-info__item artist'>{selectedVideo.channel}</li>
                     
                     <li className = 'vid-info__item'>
                         <div className = "vid-info__container">
                             <img className = "vid-info__icon" src={views} alt="views icon"></img>
                         </div>
                         
-                        <span className = "vid-info__views">{selectedVideo.views}</span>
+                        <span className = "vid-info__item views">{selectedVideo.views}</span>
                     </li>
                     
-                    <li className = 'vid-info__timestamp'>{new Date(selectedVideo.timestamp).toLocaleDateString()}</li>
+                    <li className = 'vid-info__item timestamp'>{new Date(selectedVideo.timestamp).toLocaleDateString()}</li>
 
                     <li className = 'vid-info__item'>
                         <div className = "vid-info__container">
