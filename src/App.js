@@ -1,40 +1,35 @@
 import './App.scss';
+import React from 'react';
+
 // USE videos to fetch data for video queue section. 
-import videos from './data/videos.json';
+// import videos from './data/videos.json';
 
 // USE videoDetails for top section, fetch data to display current video playing.
 import videoDetails from './data/video-details.json';
 
-import '../src/styles/partials/_globals.scss';
-import '../src/styles/partials/_mixins.scss';
-import '../src/styles/partials/_typography.scss';
-
 import Header from './components/Header/Header.js';
-import VideoPlayer from './components/Video/Video.js';
-// import VideoDescription from './components/VideoDescription/VideoDescription';
+import Video from './components/Video/VideoPlayer.js';
+import VideoDescriptions from './components/VideoDescription/VideoDescription';
 
 
-// // NEEDS CONVERTING TO CLASS FOR STATE USE
-const App = () => {
+class App extends React.Component {
+  state = {
+    videos: videoDetails, //settings the entire object to videos
+    selectedVideo: videoDetails[0], //gets the first object from the videos array of objects. defaults to first
+  };
 
-  // state = {
-  //     selectedVideo: videoDetails[0],
-  //   }
 
-// // YOU CAN THEN USE ‘this.state.selectedVideo’ to ACCESS DATA FROM THAT JSON FILE
-  return (
-    <div className="App">
-      <Header />
-      {videos.map((video) => {
-        return(
-          <p key={video.id}>
-            {video.title}
-          </p>
-        )
-      })}
-      <VideoPlayer />
-    </div>
-  );
+  render() {
+    return (
+      <>    
+        <div className="App">
+          <Header />
+          <Video selectedVideo={this.state.selectedVideo} />  
+          <VideoDescriptions selectedVideo={this.state.selectedVideo} />
+        </div>
+      </>
+    );
+  }
 }
 
 export default App;

@@ -1,25 +1,32 @@
-// Information will be coming from the Data Folder. Create a function that will pull the information from the array of objects. 
-// Use that function in this component to iterate through?  
+import './VideoDescription.scss'
+import views from '../../assets/Icons/views.svg'
+import likes from '../../assets/Icons/likes.svg'
 
 
 function VideoDescriptions({Description}){
-//   return (
-//     <>
-//     <div className='vid-info'>
-//          <h1 class="vid-info__title"></h1>
+  return (
+    <>
+    <div className='vid-info'>
 
-//         <div class="vid-info__data">
-//             <p className='vid-info__artist'></p>
-//             <p className='vid-info__views'></p>
-//             <p className='vid-info__likes'></p>
-//             <p className='vid-info__duration'></p>
-//         </div>
+         <h1 className="vid-info__title"></h1>
+
+        <div className="vid-info__data">
+            <ul>
+                <li className='vid-info__artist'></li>
+                <li className='vid-info__views'></li>
+                <li className='vid-info__likes'> </li>
+                <li className='vid-info__duration'></li>
+            </ul>
+            
+        </div>
         
-//         <p class="vid-info__description"></p>
-//         <div class="vid-info"></div>
-//         <div class="vid-info"></div> 
-//     </div>
-//     </>
-//   )
+        <div className="vid-info__content">
+            <p className="vid-info__description"></p>
+            <p className="vid-info__count"></p>
+        </div>
+    </div>
+    </>
+    );
 }
+
 export default VideoDescriptions;
