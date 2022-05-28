@@ -1,8 +1,7 @@
 .video{
-    height: 30vh;
+    min-height: 30vh;
     &__frame {
         width: 100%;
-        // object-fit: cover;
         padding: 16px 0;
     }
 }

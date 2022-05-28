@@ -1,14 +1,14 @@
 import './App.scss';
 
 // USE videos to fetch data for video queue section. 
-import videos from './data/videos.json';
+// import videos from './data/videos.json';
 
 // USE videoDetails for top section, fetch data to display current video playing.
 import videoDetails from './data/video-details.json';
 
 import Header from './components/Header/Header.js';
-import Video from './components/Video/VideoPlayer.js';
-import VideoDescription from './components/VideoDescription/VideoDescription.js';
+import VideoPlayer from './components/Video/VideoPlayer.js';
+import VideoDescription from './components/VideoDescription/VideoDescription';
 import React from 'react';
 
 
@@ -24,7 +24,7 @@ class App extends React.Component {
       <>    
         <div className="App">
           <Header />
-          <Video selectedVideo={this.state.selectedVideo} />  
+          <VideoPlayer selectedVideo={this.state.selectedVideo} />  
           <VideoDescription selectedVideo={this.state.selectedVideo} />
         </div>
       </>
