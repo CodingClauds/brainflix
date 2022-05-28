@@ -1,32 +1,44 @@
-import './VideoDescription.scss'
-import views from '../../assets/Icons/views.svg'
-import likes from '../../assets/Icons/likes.svg'
+import './VideoDescription.scss';
+import views from '../../assets/Icons/views.svg';
+import likes from '../../assets/Icons/likes.svg';
 
-
-function VideoDescriptions({Description}){
+function VideoDescription({ selectedVideo }) {
   return (
     <>
-    <div className='vid-info'>
+        <section className='vid-info__section'>
+            <div className='vid-info__content' key={selectedVideo.id}>
+                <h1 className="vid-info__title">{selectedVideo.title}</h1>
+                
+                <ul className="vid-info__list">
+                    <li className='vid-info__artist'>{selectedVideo.channel}</li>
+                    
+                    <li className='vid-info__item'>
+                        <div className="vid-info__container">
+                            <img className="vid-info__icon" src={views} alt="views icon"></img>
+                        </div>
+                        
+                        <span className="vid-info__views">{selectedVideo.views}</span>
+                    </li>
+                    
+                    <li className='vid-info__timestamp'>{new Date(selectedVideo.timestamp).toLocaleDateString()}</li>
 
-         <h1 className="vid-info__title"></h1>
+                    <li className='vid-info__item'>
+                        <div className="vid-info__container">
+                            <img className="vid-info__icon" src={likes} alt="likes icon"></img>
+                        </div>
 
-        <div className="vid-info__data">
-            <ul>
-                <li className='vid-info__artist'></li>
-                <li className='vid-info__views'></li>
-                <li className='vid-info__likes'> </li>
-                <li className='vid-info__duration'></li>
-            </ul>
+                        <span className="vid-info__likes">{selectedVideo.likes}</span>
+                    </li>
+                </ul>
+            </div>
             
-        </div>
-        
-        <div className="vid-info__content">
-            <p className="vid-info__description"></p>
-            <p className="vid-info__count"></p>
-        </div>
-    </div>
+            <div className="vid-info__content">
+                <p className="vid-info__description">{selectedVideo.description}</p>
+                <span className="vid-info__comment-count">{selectedVideo.comments}</span>
+            </div>
+        </section>
     </>
     );
 }
 
-export default VideoDescriptions;
+export default VideoDescription;
