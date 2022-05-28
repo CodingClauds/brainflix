@@ -5,8 +5,9 @@ import upload from '../../assets/Icons/upload.svg'
 import searchIcon from '../../assets/Icons/search.svg';
 
 
-function Header() {
-    return (
+export default function Header() {
+  return (
+      <>
         <header className="header">
           <nav className="header__nav">
             <div className="header__logo-box">
@@ -26,12 +27,11 @@ function Header() {
 
             <button className="header__btn">
               <img className="header__btn-icon" src={upload} alt="upload button"/>
-                <p className="header__btn-text">Upload</p>
+                <span className="header__btn-text">upload</span>
               <div className="header__btnbox"></div>
             </button>
           </nav>
         </header>
-    );
-  }
-
-export default Header;
+      </>
+  );
+}

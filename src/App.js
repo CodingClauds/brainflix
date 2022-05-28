@@ -1,4 +1,5 @@
 import './App.scss';
+import React from 'react';
 
 // USE videos to fetch data for video queue section. 
 // import videos from './data/videos.json';
@@ -9,7 +10,7 @@ import videoDetails from './data/video-details.json';
 import Header from './components/Header/Header.js';
 import VideoPlayer from './components/Video/VideoPlayer.js';
 import VideoDescription from './components/VideoDescription/VideoDescription';
-import React from 'react';
+import Form from './components/VideoForm/Form';
 
 
 class App extends React.Component {
@@ -26,6 +27,7 @@ class App extends React.Component {
           <Header />
           <VideoPlayer selectedVideo={this.state.selectedVideo} />  
           <VideoDescription selectedVideo={this.state.selectedVideo} />
+          <Form />
         </div>
       </>
     );

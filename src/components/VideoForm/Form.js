@@ -1,0 +1,26 @@
+import './Form.scss'
+import userAvatar from '../../assets/Images/Mohan-muruge.jpg';
+import plusIcon from '../../assets/Icons/add_comment.svg'; 
+
+export default function Form() {
+  return (
+    <>
+        <div class="form">
+            <div class="form__avatar-box">
+                <img className="form__avatar" src={userAvatar} alt="user profile icon" />
+            </div>
+
+            <div className="form__submit-box">
+                <label className="form__title" for="userName">join the conversation</label>
+                <textarea className="form__userInput" placeholder='Add a new comment' rows="" cols=""></textarea>
+
+                <button className="form__btn">
+                    <img className="form__btn-icon" src={plusIcon} alt="upload button"/>
+                        <span className="form__btn-text">comment</span>
+                    <div className="form__btnbox"></div>
+                </button>
+            </div>
+        </div>
+    </>
+  )
+}

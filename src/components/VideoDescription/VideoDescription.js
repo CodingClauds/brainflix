@@ -2,8 +2,9 @@ import './VideoDescription.scss';
 import views from '../../assets/Icons/views.svg';
 import likes from '../../assets/Icons/likes.svg';
 
-function VideoDescription({ selectedVideo }) {
+export default function VideoDescription({ selectedVideo }) {
   return (
+    <>
         <section className = 'vid-info__section'>
             <div className = 'vid-info__content' key={selectedVideo.id}>
                 <h1 className = "vid-info__title">{selectedVideo.title}</h1>
@@ -33,10 +34,9 @@ function VideoDescription({ selectedVideo }) {
             
             <div className = "vid-info__content">
                 <p className = "vid-info__description">{selectedVideo.description}</p>
-                {/* <span className = "vid-info__comment-count">{selectedVideo.comments}</span> */}
+                <span className = "vid-info__comment-count">3 comments</span>
             </div>
         </section>
+    </>
     );
 }
-
-export default VideoDescription;
