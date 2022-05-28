@@ -1,0 +1,38 @@
+@use '../../styles/partials/_globals.scss' as *;
+
+.comments {
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        // border: 1px solid $color-mercury;
+    }
+
+    &__row{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__section-left {
+        justify-content: center;
+        align-items: center;    
+    } 
+
+    &__avatar{
+        @include avatar;
+        background-color: $color-mercury;
+    }
+
+    &__section-right {
+        display: flex;
+        flex-direction: column;
+    } 
+
+    &__banner {
+        display: flex;
+        justify-content: space-between;
+        margin: 1em 0;
+        width: 100%;
+    }
+}

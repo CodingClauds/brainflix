@@ -11,9 +11,11 @@ import Header from './components/Header/Header.js';
 import VideoPlayer from './components/Video/VideoPlayer.js';
 import VideoDescription from './components/VideoDescription/VideoDescription';
 import Form from './components/VideoForm/Form';
+import Comments from './components/Comments/Comments';
 
 
 class App extends React.Component {
+  
   state = {
     videos: videoDetails, //settings the entire object to videos
     selectedVideo: videoDetails[0], //gets the first object from the videos array of objects. defaults to first
@@ -28,10 +30,11 @@ class App extends React.Component {
           <VideoPlayer selectedVideo={this.state.selectedVideo} />  
           <VideoDescription selectedVideo={this.state.selectedVideo} />
           <Form />
+          <Comments selectedVideo={this.state.selectedVideo}/>
         </div>
       </>
-    );
+    )
   }
-}
+};
 
 export default App;
