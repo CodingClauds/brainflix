@@ -1,8 +1,11 @@
+@use '../../styles/partials/globals' as *;
 .video{
     min-height: 30vh;
 
     &__frame {
         width: 100%;
-        padding: 16px 0;
+        margin-top: 16px;
+        aspect-ratio: 16 / 9;
+        background-color: $color-graphite;
     }
 }

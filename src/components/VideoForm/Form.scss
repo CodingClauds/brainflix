@@ -2,10 +2,15 @@
 
 .form {
     display: flex;
+    justify-content: space-between;
     padding: 0 16px;
+    @include mobilepadding;
 
     &__avatar-box {
-        width: 100%;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
     }
 
     &__avatar {
@@ -13,11 +18,30 @@
     }
 
     &__submit-box {
-        flex-direction: column;
+        width: 78%;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: $color-silver;
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    &__userInput {
+        resize: none;
+        width: 100%;
+        min-height: 6rem;
+        margin-top: 8px;
+        padding: 10px;
+        border: 2px solid $color-mercury;
+        border-radius: 5px;
+        background-color: rgba(236, 236, 236, 0.5);
     }
 
     &__btn {
-        @include button; 
+        @include button;
+
     }
 
 }

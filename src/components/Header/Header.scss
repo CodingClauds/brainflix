@@ -16,7 +16,7 @@
     
     &__img{
         width: 10rem;
-        margin: 2em;
+        margin: 1em;
     }
     
     &__search-box {
@@ -27,14 +27,15 @@
     }
 
     &__search {
+        width: 100%;
         font-size: 18px;
         background-color: $color-alabaster;
+        background: url("../../assets/Icons/search.svg") no-repeat;
+        background-position: 4%;
+        flex: 1;
         padding: .5em 1em;
         border: 2px solid $color-mercury;
         border-radius: 5px;
-        flex: 1;
-        background: transparent url("../../assets/Icons/search.svg") no-repeat;
-        background-position: 4%;
         text-indent: 0.8rem;
     }
     
@@ -43,20 +44,7 @@
     }
 
     &__btn {
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        width: 100%;
-        max-height: 3em;
-        margin: 1em 0;
-        font-size: 20px;
-        font-weight: 600;
-        text-transform: uppercase;
-        padding: 1em;
-        color: $color-white;
-        background-color: $color-blue;
-        border: none;
-        border-radius: 5px;
+        @include button
     }
 
     &__btn-icon {

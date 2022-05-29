@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-body {
+body, textarea {
     box-sizing: border-box;
     font-family: 'AvenirNext LT Pro', sans-serif;
 }
@@ -18,7 +18,7 @@ li {
 // Primary Colours
 $color-graphite: #323232; //brainflix-black
 $color-blue: #0095FF; 
-$color-silver: #AFAFAF;
+$color-silver: rgb(175, 175, 175);
 $color-white: #FFFFFF; 
 
 // Secondary Colours
@@ -50,6 +50,11 @@ $desktop-padding-48px: 3rem;
 
 
 // --------------------------- Mixins ------------------>
+@mixin mobilepadding {
+    padding-top: 24px;
+    padding-bottom: 16px;
+}
+
 
 @mixin tablet {
     @media screen and (min-width: 768px){
@@ -64,12 +69,18 @@ $desktop-padding-48px: 3rem;
 }
 
 @mixin button {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
     width: 100%;
-    font-size: 18px;
+    max-height: 3em;
+    font-size: 20px;
+    font-weight: 600;
     text-transform: uppercase;
-    padding: 1em;
-    margin: 1em 0;
-    color: $color-white;
+    margin-top: 16px;
+    padding: 0.5em;
+    color: #FFFFFF;
+    background-color: #0095FF;
     border: none;
     border-radius: 5px;
 }

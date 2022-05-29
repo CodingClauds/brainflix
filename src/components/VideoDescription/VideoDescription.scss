@@ -1,9 +1,34 @@
 @use '../../styles/partials/_globals.scss' as *;
 
-.vid-info__section {
-    padding: 0 16px;
+.video-info {
+    
+    &__section{
+        padding: 0 16px;
+    }
+    
+    &__title {
+        font-size: 26px;
+        line-height: 45px;
+        border-bottom: 2px solid $color-mercury;
+        @include mobilepadding;
+    }
 
-    &__item {
-        list-style-type: none;
+    &__list {
+        display: flex;
+        @include mobilepadding;
+        margin: .5em 0;
     }        
+
+    &__description {
+        @include mobilepadding;
+        border-top: 2px solid $color-mercury;
+        line-height: 1.5;
+        font-size: 17px;
+    }
+
+    &__comment-count {
+        font-weight: 700;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
 }
