@@ -28,17 +28,6 @@ $color-mercury: #E1E1E1;
 $color-alabaster: #FAFAFA;
 
 
-// DESKTOP / TABLET
-// Padding before headlines: 36px
-// Padding after headlines: 24px
-// Padding between components: 24px
-
-// MOBILE
-// Padding before headlines: 24px
-// Padding after headlines: 16px
-// Padding between components: 16px
-
-
 $mobile-padding-16px: 1rem;
 $mobile-padding-24px: 1.5rem;
 
@@ -49,10 +38,25 @@ $desktop-padding-48px: 3rem;
 // --------------------------- Variables ------------------>
 
 
+// DESKTOP / TABLET
+// Padding before headlines: 36px
+// Padding after headlines: 24px
+// Padding between components: 24px
+
+// MOBILE
+// Padding before headlines: 24px
+// Padding after headlines: 16px
+// Padding between components: 16px
+
 // --------------------------- Mixins ------------------>
 @mixin mobilepadding {
     padding-top: 24px;
     padding-bottom: 16px;
+}
+
+@mixin tb-dsk-padding {
+    padding-top: 36px;
+    padding-bottom: 24px;
 }
 
 
@@ -72,6 +76,7 @@ $desktop-padding-48px: 3rem;
     display: flex;
     justify-content: space-between;
     text-align: center;
+    align-items: center;
     width: 100%;
     max-height: 3em;
     font-size: 20px;

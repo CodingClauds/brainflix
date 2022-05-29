@@ -14,22 +14,24 @@ export default function Header() {
               <img className="header__img" src={siteLogo} alt="brainflix logo" />
             </div>
 
-            <div className="header__search-box">
-                {/* background the search img in styles */}
-                <div className="header__search-icon">
+              <div className="header__search-box">
+                <div className="header__search-icon header__search-order">
                   <input className="header__search" src={searchIcon} type="text" placeholder='Search'/>
                 </div>
 
-              <div className="header__avatar-box">
-                <img className='header__user-logo' src={userLogo} alt="user profile"/>
-              </div>
-            </div>
+                <div className="header__avatar-box header__avatar-order">
+                  <img className='header__user-logo' src={userLogo} alt="user profile"/>
+                </div>
+          
+                <button className="header__btn header__upload-order">
+                  <img className="header__btn-icon" src={upload} alt="upload button"/>
+                    <span className="header__btn-text">upload</span>
+                  <div className="header__btnbox"></div>
+                </button>
 
-            <button className="header__btn">
-              <img className="header__btn-icon" src={upload} alt="upload button"/>
-                <span className="header__btn-text">upload</span>
-              <div className="header__btnbox"></div>
-            </button>
+              </div>
+              
+
           </nav>
         </header>
       </>

@@ -22,6 +22,11 @@
         flex-wrap: wrap;
         @include mobilepadding;
         margin: .5em 0;
+
+        @include tablet {
+            flex-wrap: nowrap;
+            
+        }
     }        
 
     &__list-gap {
