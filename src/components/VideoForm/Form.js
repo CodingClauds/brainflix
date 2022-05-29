@@ -12,13 +12,16 @@ export default function Form() {
 
             <div className="form__submit-box">
                 <label className="form__title">join the conversation</label>
-                <textarea className="form__userinput" placeholder='Add a new comment' rows="" cols=""></textarea>
+                
+                <div class="form__test">
+                    <textarea className="form__userinput" placeholder='Add a new comment' rows="" cols=""></textarea>
 
-                <button className="form__btn">
-                    <img className="form__btn-icon" src={plusIcon} alt="upload button"/>
-                        <span className="form__btn-text">comment</span>
-                    <div className="form__btnbox"></div>
-                </button>
+                    <button className="form__btn">
+                        <img className="form__btn-icon" src={plusIcon} alt="upload button"/>
+                            <span className="form__btn-text">comment</span>
+                        <div className="form__btnbox"></div>
+                    </button>
+                </div>
             </div>
         </div>
     </>

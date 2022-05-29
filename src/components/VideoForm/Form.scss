@@ -22,6 +22,10 @@
 
     &__submit-box {
         width: 80%;
+
+        @include tablet {
+            width: 90%;
+        }
     }
 
     &__title {
@@ -30,21 +34,41 @@
         font-weight: 700;
         font-size: 12px;
     }
+    
+    &__test{
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+    }
 
     &__userinput {
         resize: none;
+        color: $color-black;
         width: 100%;
-        min-height: 6rem;
+        height: 6rem;
         margin-top: 8px;
         padding: 10px;
         border: 2px solid $color-mercury;
         border-radius: 5px;
         background-color: rgba(236, 236, 236, 0.5);
+
+        @include tablet {
+            height: 2.6rem;
+            margin-top: 0;
+            width: 65%;
+        }
     }
 
     &__btn {
         @include button;
+        font-size: 14px;
 
+        @include tablet {
+            max-width: 30%;
+            margin-top: 0;
+        }
     }
-
 }
