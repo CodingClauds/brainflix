@@ -1,12 +1,12 @@
-@use '../../styles/partials/globals' as *;
+@use "../../styles/partials/globals" as *;
 
 .videoplayer {
-    min-height: 30vh;
-    margin-top: 16px;
-    
-    &__frame {
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        background-color: $color-graphite;
-    }
+  min-height: 30vh;
+  margin-top: 16px;
+
+  &__frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: $color-graphite;
+  }
 }

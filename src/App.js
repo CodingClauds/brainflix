@@ -17,7 +17,7 @@ import VideoQueue from "./components/VideoQueue/VideoQueue";
 class App extends React.Component {
   state = {
     sidebarVideo: sidebarVideo,
-    selectedVideo: videoDetails[0], // This gets the first object from the videos array of objects.
+    selectedVideo: videoDetails[0],
     videoDetails,
   };
 

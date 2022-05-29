@@ -1,116 +1,114 @@
-@use '../../styles/partials/_globals.scss' as *;
+@use "../../styles/partials/_globals.scss" as *;
 
 .header {
-    margin: 0 16px;
-    
+  margin: 0 16px;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    margin: 0 36px;
+    margin-top: 16px;
+  }
+
+  @include desktop {
+    margin: 0 48px;
+    margin-top: 24px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
     @include tablet {
-        display: flex;
-        align-items: center;
-        margin: 0 36px;   
-        margin-top: 16px;
+      display: flex;
+      flex-direction: row;
     }
+  }
 
-    @include desktop {
-        margin: 0 48px;
-        margin-top: 24px;
+  &__search-order {
+    order: 1;
+  }
+
+  &__avatar-order {
+    order: 2;
+
+    @include tablet {
+      order: 3;
     }
+  }
 
-    &__nav {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-        @include tablet {
-            display: flex;
-            flex-direction: row;
-        }
+  &__upload-order {
+    order: 3;
+    @include tablet {
+      order: 2;
     }
+  }
 
-    &__search-order{
-        order: 1;
+  &__logo-box {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__img {
+    width: 10rem;
+    margin: 1em;
+  }
+
+  &__search-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include tablet {
+      width: 100%;
+      justify-content: flex-end;
     }
+  }
 
-    &__avatar-order{
-        order: 2;
-        
-        @include tablet {
-            order: 3;
-        }
+  &__search {
+    width: 100%;
+    font-size: 18px;
+    background-color: $color-alabaster;
+    background: url("../../assets/Icons/search.svg") no-repeat;
+    background-position: 4%;
+    padding: 0.5em 1em;
+    border: 2px solid $color-mercury;
+    border-radius: 5px;
+    text-indent: 0.8rem;
+
+    @include tablet {
+      font-size: 12px;
+      width: 15rem;
+      padding: 0 20px;
+      min-height: 2.5rem;
     }
+  }
 
-    &__upload-order{
-        order: 3;
-        @include tablet {
-            order: 2;
-        }
+  &__user-logo {
+    @include avatar;
+    padding: 2px;
+  }
+
+  &__btn {
+    @include button;
+    cursor: pointer;
+
+    @include tablet {
+      min-height: 2.5rem;
+      width: 10rem;
+      margin: 0 1rem;
+      font-size: 12px;
+      width: 10rem;
     }
+  }
 
-    &__logo-box {
-        display: flex;
-        justify-content: space-around;
+  &__btn-icon {
+    max-width: 10%;
+
+    @include tablet {
+      max-width: 15%;
     }
-    
-    &__img{
-        width: 10rem;
-        margin: 1em;
-    }
-    
-    &__search-box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        // gap: 1rem;
-
-        @include tablet {
-            width: 100%;
-            justify-content: flex-end;
-        }
-    }
-
-    &__search {
-        width: 100%;
-        font-size: 18px;
-        background-color: $color-alabaster;
-        background: url("../../assets/Icons/search.svg") no-repeat;
-        background-position: 4%;
-        // flex: 1;
-        padding: .5em 1em;
-        border: 2px solid $color-mercury;
-        border-radius: 5px;
-        text-indent: 0.8rem;
-
-        @include tablet {
-            font-size: 12px;
-            width: 15rem;
-            padding: 0 20px;
-            min-height: 2.5rem;
-        }
-    }
-    
-    &__user-logo{
-        @include avatar;
-        padding: 2px;
-    }
-
-    &__btn {
-        @include button;
-        cursor: pointer;
-
-        @include tablet {
-            min-height: 2.5rem;
-            width: 10rem;
-            margin: 0 1rem;
-            font-size: 12px;
-            width: 10rem;
-        }
-    }
-
-    &__btn-icon {
-        max-width: 10%;
-
-        @include tablet {
-            max-width: 15%;
-        }
-    }
+  }
 }
