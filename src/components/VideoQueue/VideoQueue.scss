@@ -1,12 +1,51 @@
-.video {
+@use '../../styles/partials/_globals.scss' as *;
 
+.video {
+    padding: 0 16px;
+    
     &__queue {
-        
 
     }
 
+    &__title {
+        text-transform: uppercase;
+        color: $color-silver;
+        font-weight: 700;
+        font-size: 16px;
+        margin: 1em 0;
+
+    }
+
+    &__content {
+        display: flex;
+        max-height: 5rem;
+    }
+
     &__img{
-        width: 100%;
+        max-width: 10rem;
+        height: 4rem;
+        aspect-ratio: 16/9;
+        border-radius: 5px;
+        margin: 0.5em 0;
+        object-fit: cover;
+    }
+
+    &__queue-items{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 16px;
+        font-size: 12px;
+    }
+    
+    &__queue-title {
+        padding-bottom: 10px;
+        font-weight: 600;
+        
+    }
+    
+    &__queue-channel {
+
     }
 }
 

@@ -2,7 +2,7 @@ import './App.scss';
 import React from 'react';
 
 // USE videos to fetch data for video queue section. 
-// import videos from './data/videos.json';
+import sidebarVideo from './data/videos.json';
 
 // USE videoDetails for top section, fetch data to display current video playing.
 import videoDetails from './data/video-details.json';
@@ -18,20 +18,20 @@ import VideoQueue from './components/VideoQueue/VideoQueue';
 class App extends React.Component {
   
   state = {
-    videos: videoDetails, //setting the entire object to videos
-    selectedVideo: videoDetails[0], //gets the first object from the videos array of objects. defaults to first
+    sidebarVideo: sidebarVideo, //setting the entire object to videos
+    selectedVideo: videoDetails[0],
+    videoDetails //gets the first object from the videos array of objects. defaults to first
   }
 
-
   filter = () => {
-    return this.state.videos.filter((video) => {
+    return this.state.sidebarVideo.filter((video) => {
       return video.id !== this.state.selectedVideo.id; 
     })
   }
 
   clickedVideo = (videoId) => {
     this.setState({
-      selectedVideo: this.state.videos.find((video) => {
+      selectedVideo: this.state.videoDetails.find((video) => {
         return video.id === videoId; //this returns the video object that has been selected.
       }),
     })
