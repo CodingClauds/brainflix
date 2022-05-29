@@ -1,12 +1,12 @@
 @use '../../styles/partials/_globals.scss' as *;
 
 .header {
-    padding: 0 16px;
+    margin: 0 16px;
     
     @include tablet {
         display: flex;
         align-items: center;
-        padding-top: 16px;
+        margin-top: 16px;
     }
 
     &__nav {

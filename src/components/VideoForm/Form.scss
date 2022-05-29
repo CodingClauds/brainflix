@@ -3,8 +3,12 @@
 .form {
     display: flex;
     justify-content: space-between;
-    padding: 0 16px;
+    margin: 0 16px;
+    
     @include mobilepadding;
+    @include tablet {
+        margin: 0 36px;    
+    }
 
     &__avatar-box {
         display: flex;

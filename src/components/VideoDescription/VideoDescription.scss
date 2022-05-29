@@ -3,7 +3,11 @@
 .video-info {
     
     &__section{
-        padding: 0 16px;
+        margin: 0 16px;
+        
+        @include tablet {
+            margin: 0 36px;
+        }
     }
     
     &__title {
@@ -11,6 +15,10 @@
         line-height: 45px;
         border-bottom: 2px solid $color-mercury;
         @include mobilepadding;
+
+        @include tablet {
+            font-size: 32px;
+        }
     }
     
     &__item-color {
@@ -24,8 +32,7 @@
         margin: .5em 0;
 
         @include tablet {
-            flex-wrap: nowrap;
-            
+            // flex-wrap: nowrap;
         }
     }        
 
@@ -47,7 +54,31 @@
     &__artist {
         font-weight: 700;
         font-size: 14px;
+
+        // &--order {
+        //     order: 1;
+        // }
     }
+
+    // &__views {
+    //     order: 2;
+
+    //     &--order{
+    //         order: 3;
+    //     }
+    // }
+
+    // &__timestamp {
+    //     &--order{
+    //         order: 2;
+    //     }
+    // }
+
+    // &__likes {
+    //     &--order{
+    //         order: 4;
+    //     }
+    // }
 
 
     &__description {
@@ -61,5 +92,9 @@
         font-weight: 700;
         text-transform: capitalize;
         font-size: 16px;
+
+        @include tablet {
+            margin-top: 2rem;
+        }
     }
 }

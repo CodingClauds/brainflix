@@ -1,35 +1,55 @@
 @use '../../styles/partials/_globals.scss' as *;
 
 .comments {
-    padding: 0 16px;
+    margin: 0 16px;
+    
+    @include tablet {
+        margin: 0 36px;
+    }
+
+    @include desktop {
+        margin: 0 auto;
+    }
 
     &__content{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        @include mobilepadding;
+        padding: 16px 0;
         border-top: 1px solid $color-mercury;
     }
 
     &__row{
         display: flex;
         justify-content: space-between;
+
+        @include tablet {
+            align-items: center;
+        }
     }
 
     &__section-left {
         justify-content: center;
-        align-items: center;    
     } 
 
     &__avatar{
         @include avatar;
         background-color: $color-mercury;
+        margin-top: 1rem;
+
+        @include tablet {
+            margin-top: 0;
+        }
     }
 
     &__section-right {
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 75%;
+
+        @include tablet {
+            width: 90%;
+        }
     } 
 
     &__banner {
@@ -50,5 +70,11 @@
 
     &__userinput {
         line-height: 1.5;
+        font-size: 14px;
+        
+        @include tablet {
+            letter-spacing: -0.3px;
+            font-size: 14px;
+        }
     }
 }

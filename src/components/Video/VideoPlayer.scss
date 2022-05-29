@@ -2,10 +2,10 @@
 
 .videoplayer {
     min-height: 30vh;
-
+    margin-top: 16px;
+    
     &__frame {
         width: 100%;
-        margin-top: 16px;
         aspect-ratio: 16 / 9;
         background-color: $color-graphite;
     }

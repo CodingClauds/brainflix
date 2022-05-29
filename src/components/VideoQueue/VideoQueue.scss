@@ -33,12 +33,19 @@
         justify-content: space-evenly;
         margin-left: 16px;
         font-size: 12px;
+
+        @include tablet {
+            width: 9rem;
+        }
     }
     
     &__queue-title {
         padding-bottom: 10px;
         font-weight: 600;
-        
+    }
+
+    &__queue-channel {
+        transform: translateY(-5px);
     }
     
 }
