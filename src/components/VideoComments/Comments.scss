@@ -1,12 +1,15 @@
 @use '../../styles/partials/_globals.scss' as *;
 
 .comments {
-
+    padding: 0 16px;
+    
     &__content{
         display: flex;
         flex-direction: column;
-        padding: 16px;
-        // border: 1px solid $color-mercury;
+        justify-content: space-between;
+        padding: 0 16px;
+        @include mobilepadding;
+        border-top: 1px solid $color-mercury;
     }
 
     &__row{
