@@ -11,7 +11,7 @@ export default function VideoDescription({ selectedVideo }) {
                 
                 <ul className = "video-info__list">
                     <div className = "video-info__list-gap">
-                    {/* <div className = "video-info__order"> */} 
+                        {/* <div className = "video-info__order"> */} 
 
                         <li className = 'video-info__item video-info__artist--order'>By {selectedVideo.channel}</li>
                         

@@ -8,6 +8,11 @@
         @include tablet {
             margin: 0 36px;
         }
+
+        @include desktop {
+            margin: 0 48px;
+            width: 60%;
+        }
     }
     
     &__title {

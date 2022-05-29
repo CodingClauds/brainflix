@@ -9,6 +9,11 @@
         margin-top: 16px;
     }
 
+    @include desktop {
+        margin: 0 48px;
+        margin-top: 24px;
+    }
+
     &__nav {
         display: flex;
         flex-direction: column;
