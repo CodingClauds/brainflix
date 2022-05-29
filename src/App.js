@@ -18,9 +18,9 @@ import VideoQueue from './components/VideoQueue/VideoQueue';
 class App extends React.Component {
   
   state = {
-    sidebarVideo: sidebarVideo, //setting the entire object to videos
-    selectedVideo: videoDetails[0],
-    videoDetails //gets the first object from the videos array of objects. defaults to first
+    sidebarVideo: sidebarVideo, 
+    selectedVideo: videoDetails[0],// This gets the first object from the videos array of objects. 
+    videoDetails 
   }
 
   filter = () => {
@@ -32,7 +32,7 @@ class App extends React.Component {
   clickedVideo = (videoId) => {
     this.setState({
       selectedVideo: this.state.videoDetails.find((video) => {
-        return video.id === videoId; //this returns the video object that has been selected.
+        return video.id === videoId; 
       }),
     })
   }
