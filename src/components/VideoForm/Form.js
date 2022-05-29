@@ -13,7 +13,7 @@ export default function Form() {
             <div className="form__submit-box">
                 <label className="form__title">join the conversation</label>
                 
-                <div class="form__test">
+                <div class="form__content">
                     <textarea className="form__userinput" placeholder='Add a new comment' rows="" cols=""></textarea>
 
                     <button className="form__btn">

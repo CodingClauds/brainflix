@@ -1,108 +1,108 @@
-@use '../../styles/partials/_globals.scss' as *;
+@use "../../styles/partials/_globals.scss" as *;
 
 .video-info {
-    
-    &__section{
-        margin: 0 16px;
-        
-        @include tablet {
-            margin: 0 36px;
-        }
+  &__section {
+    margin: 0 16px;
 
-        @include desktop {
-            margin: 0 48px;
-            width: 60%;
-        }
-    }
-    
-    &__title {
-        font-size: 26px;
-        line-height: 45px;
-        border-bottom: 2px solid $color-mercury;
-        @include mobilepadding;
-
-        @include tablet {
-            font-size: 32px;
-        }
-    }
-    
-    &__item-color {
-        color: $color-silver;
-    }
-    
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        @include mobilepadding;
-        margin: .5em 0;
-
-        @include tablet {
-            // flex-wrap: nowrap;
-        }
-    }        
-
-    &__list-gap {
-        display: flex;
-        justify-content: space-between;
-        width: 85%;
-        margin: 10px 0;
+    @include tablet {
+      margin: 0 36px;
     }
 
-    &__item-icon {
-        display: flex;
+    @include desktop {
+      margin: 0 48px;
     }
+  }
 
-    &__container {
-        margin-right: 5px;
+  &__title {
+    font-size: 26px;
+    line-height: 45px;
+    border-bottom: 2px solid $color-mercury;
+    @include mobilepadding;
+
+    @include tablet {
+      font-size: 32px;
+      border-bottom: none;
+      padding-bottom: 0;
     }
-    
-    &__artist {
-        font-weight: 700;
-        font-size: 14px;
+  }
 
-        // &--order {
-        //     order: 1;
-        // }
+  &__item-color {
+    color: $color-silver;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5em 0;
+    padding-bottom: 16px;
+  }
+
+  &__list-gap {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 10px 0;
+  }
+
+  &__item-icon {
+    display: flex;
+    // order: 2;
+  }
+
+  &__container {
+    margin-right: 5px;
+  }
+
+  &__artist {
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 5rem;
+
+    @include tablet {
+      margin-right: 1rem;
     }
+  }
 
-    // &__views {
-    //     // order: 2;
+  &__item-views {
+    display: flex;
+  }
 
-    //     &--order{
-    //         // order: 3;
-    //     }
-    // }
+  &__item-likes {
+    display: flex;
+    padding-top: 1rem;
 
-    // &__timestamp {
-    //     &--order{
-    //         // order: 2;
-    //     }
-    // }
-
-    // &__likes {
-    //     &--order{
-    //         order: 2;
-    //     }
-    // }
-
-    &__description {
-        @include mobilepadding;
-        border-top: 2px solid $color-mercury;
-        line-height: 1.5;
-        font-size: 17px;
-
-        @include tablet {
-            font-size: 14px;
-        }
+    @include tablet {
+      padding: 0;
     }
+  }
 
-    &__comment-count {
-        font-weight: 700;
-        text-transform: capitalize;
-        font-size: 16px;
+  &__timestamp {
+    margin-right: 5.5rem;
+    padding-top: 1rem;
 
-        @include tablet {
-            margin-top: 2rem;
-        }
+    @include tablet {
+      padding: 0;
     }
+  }
+
+  &__description {
+    @include mobilepadding;
+    border-top: 2px solid $color-mercury;
+    line-height: 1.5;
+    font-size: 17px;
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__comment-count {
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 16px;
+
+    @include tablet {
+      margin-top: 2rem;
+    }
+  }
 }

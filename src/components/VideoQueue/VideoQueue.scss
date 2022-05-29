@@ -1,52 +1,65 @@
-@use '../../styles/partials/_globals.scss' as *;
+@use "../../styles/partials/_globals.scss" as *;
 
 .video {
-    padding: 0 16px;
+  margin: 0 16px;
 
-    &__title {
-        border-top: 1px solid $color-mercury;
-        padding-top: 16px;
-        text-transform: uppercase;
-        color: $color-silver;
-        font-weight: 700;
-        font-size: 16px;
-        margin: 1em 0;
-    }
+  @include tablet {
+    margin: 0 36px;
+  }
 
-    &__content {
-        display: flex;
-        max-height: 5rem;
-    }
+  @include desktop {
+    margin-right: 48px;
+    border-left: 2px solid #e1e1e1;
+    padding-left: 5rem;
+    height: 50rem;
+  }
 
-    &__img{
-        max-width: 10rem;
-        height: 4rem;
-        aspect-ratio: 16/9;
-        border-radius: 5px;
-        margin: 0.5em 0;
-        object-fit: cover;
-    }
+  &__title {
+    border-top: 1px solid $color-mercury;
+    padding-top: 16px;
+    text-transform: uppercase;
+    color: $color-silver;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 1em 0;
 
-    &__queue-items{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: 16px;
-        font-size: 12px;
+    @include desktop {
+      border-top: none;
+    }
+  }
 
-        @include tablet {
-            width: 9rem;
-        }
-    }
-    
-    &__queue-title {
-        padding-bottom: 10px;
-        font-weight: 600;
-    }
+  &__content {
+    display: flex;
+    max-height: 5rem;
+  }
 
-    &__queue-channel {
-        transform: translateY(-5px);
+  &__img {
+    max-width: 10rem;
+    height: 4rem;
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+    margin: 0.5em 0;
+    object-fit: cover;
+  }
+
+  &__queue-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 16px;
+    font-size: 12px;
+
+    @include tablet {
+      width: 9rem;
     }
-    
+  }
+
+  &__queue-title {
+    padding-bottom: 10px;
+    font-weight: 600;
+  }
+
+  &__queue-channel {
+    transform: translateY(-5px);
+  }
 }
-

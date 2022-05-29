@@ -1,32 +1,32 @@
 * {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
-body, textarea {
-    box-sizing: border-box;
-    font-family: 'AvenirNext LT Pro', sans-serif;
+body,
+textarea {
+  box-sizing: border-box;
+  font-family: "AvenirNext LT Pro", sans-serif;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 // --------------------------- Variables ------------------>
 
 // Primary Colours
 $color-graphite: #323232; //brainflix-black
-$color-blue: #0095FF; 
+$color-blue: #0095ff;
 $color-silver: rgb(175, 175, 175);
-$color-white: #FFFFFF; 
+$color-white: #ffffff;
 
 // Secondary Colours
 $color-black: #000000;
-$color-darkblue: #0065AD;
-$color-mercury: #E1E1E1;
-$color-alabaster: #FAFAFA;
-
+$color-darkblue: #0065ad;
+$color-mercury: #e1e1e1;
+$color-alabaster: #fafafa;
 
 $mobile-padding-16px: 1rem;
 $mobile-padding-24px: 1.5rem;
@@ -34,9 +34,7 @@ $mobile-padding-24px: 1.5rem;
 $tablet-padding-36px: 2.25rem;
 $desktop-padding-48px: 3rem;
 
-
 // --------------------------- Variables ------------------>
-
 
 // DESKTOP / TABLET
 // Padding before headlines: 36px
@@ -49,51 +47,57 @@ $desktop-padding-48px: 3rem;
 // Padding between components: 16px
 
 // --------------------------- Mixins ------------------>
-@mixin mobilepadding {
-    padding-top: 24px;
-    padding-bottom: 16px;
-}
-
-@mixin tb-dsk-padding {
-    padding-top: 36px;
-    padding-bottom: 24px;
-}
-
 
 @mixin tablet {
-    @media screen and (min-width: 768px){
-        @content;   
-    }
+  @media screen and (min-width: 768px) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media screen and (min-width: 1280px){
-        @content;   
-    }
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
 }
 
 @mixin button {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    max-height: 3em;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 16px;
-    padding: 0.5em;
-    color: #FFFFFF;
-    background-color: #0095FF;
-    border: none;
-    border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  max-height: 3em;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 16px;
+  padding: 0.5em;
+  color: #ffffff;
+  background-color: #0095ff;
+  border: none;
+  border-radius: 5px;
 }
 
 @mixin avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+@mixin mobilepadding {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+@mixin tb-dsk-padding {
+  padding-top: 36px;
+  padding-bottom: 24px;
+}
+
+@include desktop {
+  .desktop {
+    display: flex;
+  }
 }
 
 // --------------------------- Mixins ------------------>
