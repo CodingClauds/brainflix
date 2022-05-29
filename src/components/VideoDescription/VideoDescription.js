@@ -10,25 +10,29 @@ export default function VideoDescription({ selectedVideo }) {
                 <h1 className = "video-info__title">{selectedVideo.title}</h1>
                 
                 <ul className = "video-info__list">
-                    <li className = 'video-info__item artist'>{selectedVideo.channel}</li>
-                    
-                    <li className = 'video-info__item'>
-                        <div className = "video-info__container">
-                            <img className = "video-info__icon" src={views} alt="views icon"></img>
-                        </div>
+                    <div className = "video-info__list-gap">
+                        <li className = 'video-info__item video-info__artist'>By {selectedVideo.channel}</li>
                         
-                        <span className = "video-info__item views">{selectedVideo.views}</span>
-                    </li>
-                    
-                    <li className = 'video-info__item timestamp'>{new Date(selectedVideo.timestamp).toLocaleDateString()}</li>
+                        <li className = 'video-info__item video-info__item-icon'>
+                            <div className = "video-info__container">
+                                <img className = "video-info__icon" src={views} alt="views icon"></img>
+                            </div>
+                            
+                            <span className = "video-info__item-color views">{selectedVideo.views}</span>
+                        </li>
+                    </div>
 
-                    <li className = 'video-info__item'>
-                        <div className = "video-info__container">
-                            <img className = "video-info__icon" src={likes} alt="likes icon"></img>
-                        </div>
+                    <div className = "video-info__list-gap">
+                        <li className = 'video-info__item-color video-info__timestamp'>{new Date(selectedVideo.timestamp).toLocaleDateString()}</li>
 
-                        <span className = "video-info__likes">{selectedVideo.likes}</span>
-                    </li>
+                        <li className = 'video-info__item video-info__item-icon'>
+                            <div className = "video-info__container">
+                                <img className = "video-info__icon" src={likes} alt="likes icon"></img>
+                            </div>
+
+                            <span className = "video-info__item-color">{selectedVideo.likes}</span>
+                        </li>
+                    </div>
                 </ul>
             </div>
             

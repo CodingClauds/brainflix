@@ -12,12 +12,38 @@
         border-bottom: 2px solid $color-mercury;
         @include mobilepadding;
     }
-
+    
+    &__item-color {
+        color: $color-silver;
+    }
+    
     &__list {
         display: flex;
+        flex-wrap: wrap;
         @include mobilepadding;
         margin: .5em 0;
     }        
+
+    &__list-gap {
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        margin: 10px 0;
+    }
+
+    &__item-icon {
+        display: flex;
+    }
+
+    &__container {
+        margin-right: 5px;
+    }
+    
+    &__artist {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
 
     &__description {
         @include mobilepadding;
@@ -29,6 +55,6 @@
     &__comment-count {
         font-weight: 700;
         text-transform: capitalize;
-        font-size: 20px;
+        font-size: 16px;
     }
 }
