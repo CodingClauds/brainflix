@@ -43,13 +43,13 @@ class App extends React.Component {
           <VideoPlayer selectedVideo={this.state.selectedVideo} />
 
           <div className="desktop">
-            <div class="desktop_left">
+            <div className="desktop_left">
               <VideoDescription selectedVideo={this.state.selectedVideo} />
               <Form />
               <Comments selectedVideo={this.state.selectedVideo} />
             </div>
 
-            <div class="desktop-right">
+            <div className="desktop-right">
               <VideoQueue
                 videoList={this.filter()}
                 clickedVideo={this.clickedVideo}

@@ -17,7 +17,7 @@ export default function Form() {
         <div className="form__submit-box">
           <label className="form__title">join the conversation</label>
 
-          <div class="form__content">
+          <div className="form__content">
             <textarea
               className="form__userinput"
               placeholder="Add a new comment"
