@@ -19,7 +19,7 @@ li {
 // Primary Colours
 $color-graphite: #323232; //brainflix-black
 $color-blue: #0095ff;
-$color-silver: rgb(175, 175, 175);
+$color-silver: #afafaf;
 $color-white: #ffffff;
 
 // Secondary Colours
@@ -82,6 +82,7 @@ $desktop-padding-48px: 3rem;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 @mixin mobilepadding {
