@@ -6,7 +6,11 @@ export default function VideoPlayer({ selectedVideo }) {
     <>
       <div>
         <section className="videoplayer">
-          <video className="videoplayer__frame" controls poster={selectedVideo.image}></video>
+          <video
+            className="videoplayer__frame"
+            controls={true}
+            poster={selectedVideo.image}
+          ></video>
         </section>
       </div>
     </>

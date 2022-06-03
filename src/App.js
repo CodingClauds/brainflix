@@ -1,65 +1,27 @@
 import "./App.scss";
-import React from "react";
+import Header from "./components/Header/Header";
+import HomePage from "./components/HomePage/HomePage.js";
+import Upload from "./pages/Upload/Upload";
 
-// USE videos to fetch data for video queue section.
-import sidebarVideo from "./data/videos.json";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-// USE videoDetails for top section, fetch data to display current video playing.
-import videoDetails from "./data/video-details.json";
-
-import Header from "./components/Header/Header.js";
-import VideoPlayer from "./components/Video/VideoPlayer.js";
-import VideoDescription from "./components/VideoDescription/VideoDescription";
-import Form from "./components/VideoForm/Form";
-import Comments from "./components/VideoComments/Comments";
-import VideoQueue from "./components/VideoQueue/VideoQueue";
-
-class App extends React.Component {
-  state = {
-    sidebarVideo: sidebarVideo,
-    selectedVideo: videoDetails[0],
-    videoDetails,
-  };
-
-  filter = () => {
-    return this.state.sidebarVideo.filter((video) => {
-      return video.id !== this.state.selectedVideo.id;
-    });
-  };
-
-  clickedVideo = (videoId) => {
-    this.setState({
-      selectedVideo: this.state.videoDetails.find((video) => {
-        return video.id === videoId;
-      }),
-    });
-  };
-
-  render() {
-    return (
-      <>
-        <div className="App">
+function App() {
+  return (
+    <>
+      <div className="App">
+        <Router>
           <Header />
-          <VideoPlayer selectedVideo={this.state.selectedVideo} />
+          <Switch>
+            <Route exact path="/" component={HomePage} />
 
-          <div className="desktop">
-            <div className="desktop_left">
-              <VideoDescription selectedVideo={this.state.selectedVideo} />
-              <Form />
-              <Comments selectedVideo={this.state.selectedVideo} />
-            </div>
+            <Route path="/upload" component={Upload} />
 
-            <div className="desktop-right">
-              <VideoQueue
-                videoList={this.filter()}
-                clickedVideo={this.clickedVideo}
-              />
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  }
+            <Route path="/:id" component={HomePage} />
+          </Switch>
+        </Router>
+      </div>
+    </>
+  );
 }
 
 export default App;
