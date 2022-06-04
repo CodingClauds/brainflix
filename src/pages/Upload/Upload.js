@@ -1,5 +1,5 @@
 import "./Upload.scss";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Upload() {
   return (
@@ -42,10 +42,9 @@ export default function Upload() {
         </div>
 
         <div className="upload__btn-content">
-          <button className="upload__publish">
-            publish
-            {/* <Link to="/">Publish</Link> */}
-          </button>
+          <Link to="/">
+            <button className="upload__publish">publish</button>
+          </Link>
 
           <button className="upload__cancel">cancel</button>
         </div>

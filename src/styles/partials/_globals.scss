@@ -13,6 +13,9 @@ textarea {
 li {
   list-style-type: none;
 }
+a {
+  text-decoration: none;
+}
 
 // --------------------------- Variables ------------------>
 
@@ -67,11 +70,9 @@ $desktop-padding-48px: 3rem;
   align-items: center;
   width: 100%;
   max-height: 3em;
-  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   margin-top: 16px;
-  padding: 0.5em;
   color: #ffffff;
   background-color: #0095ff;
   border: none;

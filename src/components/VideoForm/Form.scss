@@ -70,9 +70,11 @@
   &__btn {
     @include button;
     font-size: 14px;
+    padding: 0.5em;
 
     @include tablet {
       max-width: 30%;
+      height: 3rem;
       margin-top: 0;
     }
   }

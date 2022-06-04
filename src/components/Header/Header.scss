@@ -11,7 +11,8 @@
   }
 
   @include desktop {
-    margin: 0 100px;
+    max-width: 1000px;
+    margin: 0 auto;
     margin-top: 24px;
   }
 
@@ -97,14 +98,22 @@
 
   &__btn {
     @include button;
+    width: 18rem;
+    padding: 1.5rem 1rem;
     cursor: pointer;
 
     @include tablet {
       min-height: 2.5rem;
       width: 10rem;
       margin: 0 1rem;
+    }
+  }
+
+  &__btn-text {
+    font-size: 16px;
+
+    @include tablet {
       font-size: 12px;
-      width: 10rem;
     }
   }
 
