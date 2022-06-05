@@ -9,7 +9,7 @@
     }
 
     @include desktop {
-      margin: 0 48px;
+      margin: 0;
     }
   }
 
@@ -38,6 +38,7 @@
 
     @include tablet {
       justify-content: space-between;
+      padding-right: 2rem;
     }
   }
 
@@ -71,7 +72,7 @@
 
     @include tablet {
       order: 3;
-      margin-right: -12rem;
+      margin-right: -8rem;
     }
   }
 
@@ -91,18 +92,19 @@
 
     @include tablet {
       padding: 0;
-      margin-left: -12rem;
+      margin-left: -8rem;
     }
   }
 
   &__description {
     @include mobilepadding;
-    border-top: 2px solid $color-mercury;
+    border-top: 1px solid $color-mercury;
     line-height: 1.5;
     font-size: 17px;
 
     @include tablet {
       font-size: 14px;
+      padding-right: 2rem;
     }
   }
 

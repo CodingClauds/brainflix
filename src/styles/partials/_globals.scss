@@ -1,4 +1,3 @@
-// @use "./styles/partials/_globals.scss" as *;
 @use "../../styles/partials/_typography.scss" as *;
 
 * {
@@ -41,16 +40,6 @@ $tablet-padding-36px: 2.25rem;
 $desktop-padding-48px: 3rem;
 
 // --------------------------- Variables ------------------>
-
-// DESKTOP / TABLET
-// Padding before headlines: 36px
-// Padding after headlines: 24px
-// Padding between components: 24px
-
-// MOBILE
-// Padding before headlines: 24px
-// Padding after headlines: 16px
-// Padding between components: 16px
 
 // --------------------------- Mixins ------------------>
 

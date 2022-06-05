@@ -12,7 +12,8 @@
   }
 
   @include desktop {
-    margin: 0 48px;
+    margin: 0;
+    padding-right: 2rem;
   }
 
   &__avatar-box {

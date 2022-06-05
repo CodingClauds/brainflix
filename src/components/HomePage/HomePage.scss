@@ -1,11 +1,9 @@
 @use "../../styles/partials/_globals.scss" as *;
-// @use "./styles/partials/_globals.scss" as *;
-// @use "./styles/partials/_typography.scss" as *;
 
 .desktop {
   @include desktop {
     display: flex;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 }
