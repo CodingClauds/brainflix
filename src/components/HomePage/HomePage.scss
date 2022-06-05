@@ -1,2 +1,11 @@
-// max-width: 1200px;
-// margin: 0 auto;
+@use "../../styles/partials/_globals.scss" as *;
+// @use "./styles/partials/_globals.scss" as *;
+// @use "./styles/partials/_typography.scss" as *;
+
+.desktop {
+  @include desktop {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

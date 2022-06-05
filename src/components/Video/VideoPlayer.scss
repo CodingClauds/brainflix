@@ -1,4 +1,4 @@
-@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/_globals.scss" as *;
 
 .videoplayer {
   min-height: 30vh;
@@ -7,6 +7,10 @@
   &__frame {
     width: 100%;
     aspect-ratio: 16 / 9;
-    background-color: $color-graphite;
+    background-color: $color-black;
+
+    @include tablet {
+      height: 25rem;
+    }
   }
 }

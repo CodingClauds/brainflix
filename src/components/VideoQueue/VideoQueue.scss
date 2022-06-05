@@ -57,9 +57,11 @@
   &__queue-title {
     padding-bottom: 10px;
     font-weight: 600;
+    color: $color-black;
   }
 
   &__queue-channel {
     transform: translateY(-5px);
+    color: $color-black;
   }
 }

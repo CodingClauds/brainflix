@@ -26,6 +26,20 @@
       flex-direction: row;
     }
   }
+  &__logo-box {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__img {
+    width: 10rem;
+    margin: 1em;
+
+    @include tablet {
+      width: 8rem;
+      margin-left: 0;
+    }
+  }
 
   &__search-order {
     order: 1;
@@ -43,20 +57,6 @@
     order: 3;
     @include tablet {
       order: 2;
-    }
-  }
-
-  &__logo-box {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  &__img {
-    width: 10rem;
-    margin: 1em;
-
-    @include tablet {
-      width: 8rem;
     }
   }
 
@@ -87,7 +87,7 @@
       font-size: 14px;
       width: 15rem;
       padding: 0 20px;
-      min-height: 2.5rem;
+      min-height: 3rem;
     }
   }
 

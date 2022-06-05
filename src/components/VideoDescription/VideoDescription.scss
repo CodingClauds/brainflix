@@ -62,7 +62,7 @@
     margin-right: 5rem;
 
     @include tablet {
-      margin-right: 1rem;
+      margin-right: 0rem;
     }
   }
 
@@ -71,6 +71,7 @@
 
     @include tablet {
       order: 3;
+      margin-right: -12rem;
     }
   }
 
@@ -90,6 +91,7 @@
 
     @include tablet {
       padding: 0;
+      margin-left: -12rem;
     }
   }
 
