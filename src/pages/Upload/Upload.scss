@@ -1,9 +1,19 @@
 @use "../../styles/partials/_globals.scss" as *;
 
 .divider {
-  border-top: 1.5px solid #e1e1e1;
-  margin-top: 1rem;
+  &__top {
+    border-top: 1.5px solid #e1e1e1;
+    margin-top: 1rem;
+  }
+
+  &__bottom {
+    @include desktop {
+      border-top: 1.5px solid #e1e1e1;
+    }
+  }
 }
+
+// border-bottom: 1.5px solid #e1e1e1;
 
 .upload {
   display: flex;
@@ -40,7 +50,7 @@
     @include desktop {
       display: flex;
       justify-content: space-between;
-      border-bottom: 1.5px solid $color-mercury;
+      // border-bottom: 1.5px solid $color-mercury;
     }
   }
 
@@ -137,7 +147,7 @@
     }
 
     @include desktop {
-      margin-bottom: 10rem;
+      margin-bottom: -4.5rem;
     }
   }
 

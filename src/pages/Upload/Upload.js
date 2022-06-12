@@ -30,7 +30,7 @@ export default function Upload() {
 
   return (
     <>
-      <div className="divider"></div>
+      <div className="divider__top"></div>
 
       <div className="upload">
         <h1 className="upload__title">upload video</h1>
@@ -74,6 +74,7 @@ export default function Upload() {
             </div>
           </form>
         </div>
+        <div className="divider__bottom"></div>
       </div>
     </>
   );
