@@ -1,7 +1,33 @@
+// import "dotenv/config";
 import "./Upload.scss";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import axios from "axios";
 
 export default function Upload() {
+  let history = useHistory();
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    console.log("submitHandler was clicked");
+
+    let formObject = {
+      title: event.target.title.value,
+      description: event.target.description.value,
+    };
+    console.log(formObject);
+
+    axios
+      .post("http://localhost:8080/videos", formObject)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    history.push("/");
+  };
+
   return (
     <>
       <div className="divider"></div>
@@ -15,11 +41,14 @@ export default function Upload() {
             <div className="upload__placeholder"></div>
           </div>
 
-          <div className="upload__form-content">
+          <form onSubmit={submitHandler} className="upload__form-content">
             <div className="upload__form-titlebox">
               <label className="upload__form-label">Title of your video</label>
               <input
                 className="upload__input-title"
+                type="text"
+                name="title"
+                id="title"
                 action=""
                 placeholder="Add a title to your video"
               ></input>
@@ -32,21 +61,18 @@ export default function Upload() {
               <input
                 className="upload__input-info"
                 type="text"
-                name="info"
-                id="info"
+                name="description"
+                id="description"
                 action=""
                 placeholder="Add a description to your video"
               ></input>
             </div>
-          </div>
-        </div>
+            <div className="upload__btn-content">
+              <button className="upload__publish">publish</button>
 
-        <div className="upload__btn-content">
-          <Link to="/">
-            <button className="upload__publish">publish</button>
-          </Link>
-
-          <button className="upload__cancel">cancel</button>
+              <button className="upload__cancel">cancel</button>
+            </div>
+          </form>
         </div>
       </div>
     </>

@@ -2,7 +2,6 @@ import "./Comments.scss";
 
 export default function Comments({ selectedVideo }) {
   return selectedVideo.comments.map((comment) => {
-    console.log(comment);
     return (
       <div className="comments" key={comment.name}>
         <div className="comments__content">

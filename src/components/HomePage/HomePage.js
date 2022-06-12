@@ -8,24 +8,21 @@ import Form from "../VideoForm/Form";
 import Comments from "../VideoComments/Comments";
 import VideoQueue from "../VideoQueue/VideoQueue";
 
-// const baseURL = "https://project-2-api.herokuapp.com";
-// const apiKey = "1f0806b1-00b8-4c72-a7c5-34ac52f1383f";
-
-// VIDEOS ENDPOINT
-// https://project-2-api.herokuapp.com/videos?api_key=1f0806b1-00b8-4c72-a7c5-34ac52f1383f
-
-// VIDEOS w/ :id ENDPOINT this will need an input id "Which video do you want?"
-// https://project-2-api.herokuapp.com/videos/:id?api_key=1f0806b1-00b8-4c72-a7c5-34ac52f1383f
-
 class HomePage extends React.Component {
   state = {
     sidebarVideo: [],
     selectedVideo: null,
   };
 
+  url_base = "http://localhost:8080/videos/";
+
+  // Get URL from localhost:8080 that we set up on the back-end.
   fetchSelectedVideo = (videoId) => {
     return axios.get(
-      `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=1f0806b1-00b8-4c72-a7c5-34ac52f1383f`
+      // `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=1f0806b1-00b8-4c72-a7c5-34ac52f1383f`
+
+      // Now with this localhost:8080 we set up, will grab videos from the backend using the server we created.
+      `http://localhost:8080/videos/${videoId}`
     );
   };
 
@@ -35,12 +32,13 @@ class HomePage extends React.Component {
     });
   };
 
-  // This is the whole array of the videos.
   componentDidMount() {
-    const getVideosEndpoint =
-      "https://project-2-api.herokuapp.com/videos?api_key=1f0806b1-00b8-4c72-a7c5-34ac52f1383f";
+    // const getVideosEndpoint =
+    //   "https://project-2-api.herokuapp.com/videos?api_key=1f0806b1-00b8-4c72-a7c5-34ac52f1383f";
+
     axios
-      .get(getVideosEndpoint)
+      // .get(getVideosEndpoint)
+      .get(this.url_base)
       .then((response) => {
         return response.data;
       })
@@ -59,7 +57,6 @@ class HomePage extends React.Component {
     const previousId = previousProps.match.params.id;
     const currentId = this.props.match.params.id;
 
-    // Scroll function, brings you to the top of the page.
     if (previousId !== currentId) {
       window.scrollTo({
         top: 0,
@@ -102,12 +99,7 @@ class HomePage extends React.Component {
             </div>
 
             <div className="desktop__right">
-              {individualVideo && (
-                <VideoQueue
-                  videoList={this.filter()}
-                  // clickedVideo={this.clickedVideo}
-                />
-              )}
+              {individualVideo && <VideoQueue videoList={this.filter()} />}
             </div>
           </div>
         </div>
