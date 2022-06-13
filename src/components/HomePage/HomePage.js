@@ -18,12 +18,7 @@ class HomePage extends React.Component {
 
   // Get URL from localhost:8080 that we set up on the back-end.
   fetchSelectedVideo = (videoId) => {
-    return axios.get(
-      // `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=1f0806b1-00b8-4c72-a7c5-34ac52f1383f`
-
-      // Now with this localhost:8080 we set up, will grab videos from the backend using the server we created.
-      `http://localhost:8080/videos/${videoId}`
-    );
+    return axios.get(`http://localhost:8080/videos/${videoId}`);
   };
 
   filter = () => {
@@ -33,11 +28,7 @@ class HomePage extends React.Component {
   };
 
   componentDidMount() {
-    // const getVideosEndpoint =
-    //   "https://project-2-api.herokuapp.com/videos?api_key=1f0806b1-00b8-4c72-a7c5-34ac52f1383f";
-
     axios
-      // .get(getVideosEndpoint)
       .get(this.url_base)
       .then((response) => {
         return response.data;

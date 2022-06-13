@@ -8,18 +8,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <>
-      <div className="App">
-        <Router>
-          <Header />
-          <Switch>
-            <Route exact path="/" component={HomePage} />
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
 
-            <Route path="/upload" component={Upload} />
+          <Route path="/upload" component={Upload} />
 
-            <Route path="/:id" component={HomePage} />
-          </Switch>
-        </Router>
-      </div>
+          <Route path="/:id" component={HomePage} />
+        </Switch>
+      </Router>
     </>
   );
 }

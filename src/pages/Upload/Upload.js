@@ -4,28 +4,28 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 export default function Upload() {
-  let history = useHistory();
+  let addPost = useHistory();
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log("submitHandler was clicked");
+    console.log("Button was clicked");
 
-    let formObject = {
+    let formInput = {
       title: event.target.title.value,
       description: event.target.description.value,
     };
-    console.log(formObject);
+    console.log(formInput);
 
     axios
-      .post("http://localhost:8080/videos", formObject)
+      .post("http://localhost:8080/videos", formInput)
       .then((response) => {
         console.log(response);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        console.log(error);
       });
 
-    history.push("/");
+    addPost.push("/");
   };
 
   return (
