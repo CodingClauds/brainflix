@@ -13,8 +13,6 @@
   }
 }
 
-// border-bottom: 1.5px solid #e1e1e1;
-
 .upload {
   display: flex;
   flex-direction: column;
@@ -153,7 +151,7 @@
   &__publish {
     background: url("../../assets/Icons/publish.svg") no-repeat;
     background-position: 4%;
-
+    cursor: pointer;
     text-transform: uppercase;
     text-align: center;
     align-items: center;
