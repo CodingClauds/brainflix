@@ -51,6 +51,7 @@ export default function Upload() {
                 id="title"
                 action=""
                 placeholder="Add a title to your video"
+                required
               ></input>
             </div>
 
@@ -65,12 +66,17 @@ export default function Upload() {
                 id="description"
                 action=""
                 placeholder="Add a description to your video"
+                required
               ></input>
             </div>
             <div className="upload__btn-content">
-              <button className="upload__publish">publish</button>
+              <button type="submit" className="upload__publish">
+                publish
+              </button>
 
-              <button className="upload__cancel">cancel</button>
+              <button onclick="/" className="upload__cancel">
+                cancel
+              </button>
             </div>
           </form>
         </div>

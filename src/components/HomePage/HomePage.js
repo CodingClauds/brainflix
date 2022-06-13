@@ -41,6 +41,9 @@ class HomePage extends React.Component {
             sidebarVideo: videoInfo,
           });
         });
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }
 
