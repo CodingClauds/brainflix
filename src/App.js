@@ -12,9 +12,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
-
           <Route path="/upload" component={Upload} />
-
           <Route path="/:id" component={HomePage} />
         </Switch>
       </Router>
