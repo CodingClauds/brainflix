@@ -38,14 +38,13 @@ export default function Header() {
               />
             </div>
             <Link className="header__upload-order" to="/upload">
-              <button className="header__btn header__upload-order">
+              <button className="header__button header__upload-order">
                 <img
-                  className="header__btn-icon"
+                  className="header__button-icon"
                   src={upload}
                   alt="upload button"
                 />
-                <span className="header__btn-text">upload</span>
-                <div className="header__btnbox"></div>
+                <span className="header__button-text">upload</span>
               </button>
             </Link>
           </div>
