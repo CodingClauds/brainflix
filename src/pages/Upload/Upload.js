@@ -1,7 +1,9 @@
 // import "dotenv/config";
 import "./Upload.scss";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
+
+import publish from "../../assets/Icons/publish.svg";
 
 export default function Upload() {
   let addPost = useHistory();
@@ -14,7 +16,7 @@ export default function Upload() {
       title: event.target.title.value,
       description: event.target.description.value,
     };
-    console.log(formInput);
+    // console.log(formInput);
 
     axios
       .post("http://localhost:8080/videos", formInput)
@@ -71,12 +73,17 @@ export default function Upload() {
             </div>
             <div className="upload__btn-content">
               <button type="submit" className="upload__publish">
-                publish
+                <img
+                  className="upload__icon"
+                  src={publish}
+                  alt="publish button"
+                />
+                <span>publish</span>
               </button>
 
-              <button onclick="/" className="upload__cancel">
-                cancel
-              </button>
+              <Link to={"/"}>
+                <button className="upload__cancel">cancel</button>
+              </Link>
             </div>
           </form>
         </div>
