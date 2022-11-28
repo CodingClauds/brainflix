@@ -56,11 +56,10 @@ $desktop-padding-48px: 3rem;
 }
 
 @mixin button {
+  cursor: pointer;
   display: flex;
-  justify-content: space-between;
-  text-align: center;
   align-items: center;
-  width: 100%;
+  gap: 1rem;
   max-height: 3rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -68,6 +67,10 @@ $desktop-padding-48px: 3rem;
   background-color: #0095ff;
   border: none;
   border-radius: 5px;
+}
+button:hover {
+  background-color: #02c712;
+  transition: all 0.8s ease-out;
 }
 
 @mixin avatar {
