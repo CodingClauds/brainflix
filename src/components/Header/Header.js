@@ -21,6 +21,13 @@ export default function Header() {
           </div>
 
           <div className="header__search-box">
+            <div className="header__avatar-box header__avatar-order">
+              <img
+                className="header__user-logo"
+                src={userLogo}
+                alt="user profile"
+              />
+            </div>
             <div className="header__search-icon header__search-order">
               <input
                 className="header__search"
@@ -29,14 +36,9 @@ export default function Header() {
                 placeholder="Search"
               />
             </div>
+          </div>
 
-            <div className="header__avatar-box header__avatar-order">
-              <img
-                className="header__user-logo"
-                src={userLogo}
-                alt="user profile"
-              />
-            </div>
+          <div className="header__upload-container">
             <Link className="header__upload-order" to="/upload">
               <button className="header__button header__upload-order">
                 <img

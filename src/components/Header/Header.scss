@@ -22,10 +22,11 @@
     width: 100%;
 
     @include tablet {
-      display: flex;
       flex-direction: row;
+      align-items: center;
     }
   }
+
   &__logo-box {
     display: flex;
     justify-content: space-around;
@@ -41,30 +42,29 @@
     }
   }
 
-  &__search-order {
-    order: 1;
-  }
+  // &__search-order {
+  //   order: 1;
+  // }
 
-  &__avatar-order {
-    order: 2;
+  // &__avatar-order {
+  //   order: 2;
 
-    @include tablet {
-      order: 3;
-    }
-  }
+  //   @include tablet {
+  //     order: 3;
+  //   }
+  // }
 
-  &__upload-order {
-    order: 3;
-    @include tablet {
-      order: 2;
-    }
-  }
+  // &__upload-order {
+  //   order: 3;
+  //   @include tablet {
+  //     order: 2;
+  //   }
+  // }
 
   &__search-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 
     @include tablet {
       width: 100%;
@@ -73,19 +73,27 @@
   }
 
   &__search {
-    width: 100%;
-    font-size: 18px;
+    width: 13rem;
+    font-size: 17px;
     background-color: $color-alabaster;
     background: url("../../assets/Icons/search.svg") no-repeat;
     background-position: 4%;
-    padding: 0.5em 1em;
+    padding: 0.5rem 1rem;
     border: 2px solid $color-mercury;
     border-radius: 5px;
-    text-indent: 0.8rem;
+    text-indent: 1.6rem;
+
+    @media screen and (min-width: 375px) {
+      width: 17rem;
+    }
+
+    @media screen and (min-width: 425px) {
+      width: 20rem;
+    }
 
     @include tablet {
+      // width: 20rem;
       font-size: 14px;
-      width: 15rem;
       padding: 0 20px;
       min-height: 3rem;
     }
@@ -94,12 +102,15 @@
   &__user-logo {
     @include avatar;
     padding: 2px;
+    margin: 0 14px;
   }
 
   &__button {
     @include button;
-    width: 18rem;
+    justify-content: center;
+    width: 100%;
     padding: 1.5rem 1rem;
+    margin: 1rem 0;
 
     @include tablet {
       min-height: 2.5rem;
