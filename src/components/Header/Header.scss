@@ -42,25 +42,6 @@
     }
   }
 
-  // &__search-order {
-  //   order: 1;
-  // }
-
-  // &__avatar-order {
-  //   order: 2;
-
-  //   @include tablet {
-  //     order: 3;
-  //   }
-  // }
-
-  // &__upload-order {
-  //   order: 3;
-  //   @include tablet {
-  //     order: 2;
-  //   }
-  // }
-
   &__search-box {
     display: flex;
     justify-content: space-between;
@@ -92,7 +73,6 @@
     }
 
     @include tablet {
-      // width: 20rem;
       font-size: 14px;
       padding: 0 20px;
       min-height: 3rem;
