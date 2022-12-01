@@ -25,14 +25,14 @@ export default function Form() {
               cols=""
             ></textarea>
 
-            <button className="form__btn">
+            <button className="form__comment_button">
               <img
-                className="form__btn-icon"
+                className="form__comment-button button_icon"
                 src={plusIcon}
                 alt="upload button"
               />
-              <span className="form__btn-text">comment</span>
-              <div className="form__btnbox"></div>
+              <span className="form__button-text">comment</span>
+              <div className="form__buttonbox"></div>
             </button>
           </div>
         </div>

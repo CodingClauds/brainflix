@@ -106,12 +106,4 @@
       font-size: 14px;
     }
   }
-
-  &__btn-icon {
-    max-width: 10%;
-
-    @include tablet {
-      max-width: 15%;
-    }
-  }
 }
