@@ -32,12 +32,14 @@
 
   &__list {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
     flex-wrap: wrap;
-    margin: 0.5em 0;
+    margin: 1.5em 0;
     padding-bottom: 16px;
 
     @include tablet {
-      justify-content: space-between;
       padding-right: 2rem;
     }
   }
@@ -54,7 +56,12 @@
   }
 
   &__container {
+    display: flex;
     margin-right: 5px;
+  }
+
+  &__icon {
+    width: 20px;
   }
 
   &__artist {
@@ -78,7 +85,6 @@
 
   &__item-likes {
     display: flex;
-    padding-top: 1rem;
 
     @include tablet {
       order: 4;
@@ -88,7 +94,6 @@
 
   &__timestamp {
     margin-right: 5.5rem;
-    padding-top: 1rem;
 
     @include tablet {
       padding: 0;
