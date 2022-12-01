@@ -71,7 +71,7 @@ export default function Upload() {
                 required
               ></input>
             </div>
-            <div className="upload__btn-content">
+            <div className="upload__button-content">
               <button type="submit" className="upload__publish">
                 <img
                   className="upload__icon"
