@@ -2,13 +2,13 @@
 
 .divider {
   &__top {
-    border-top: 1.5px solid #e1e1e1;
+    border-top: 1.5px solid $color-mercury;
     margin-top: 1rem;
   }
 
   &__bottom {
     @include desktop {
-      border-top: 1.5px solid #e1e1e1;
+      border-top: 1.5px solid $color-mercury;
     }
   }
 }
@@ -32,7 +32,6 @@
     font-weight: 400;
     letter-spacing: 1.5px;
     text-transform: capitalize;
-    color: black;
     margin: 24px 0;
 
     @include tablet {
@@ -126,7 +125,6 @@
 
   &__input-info {
     margin: 8px 0;
-    color: black;
     resize: none;
     width: 100%;
     padding: 1rem 0 5rem 1rem;
@@ -172,13 +170,13 @@
     padding: 1rem;
     font-size: 16px;
     font-weight: 400;
-    color: #0095ff;
-    background-color: #ffffff;
+    color: $color-blue;
+    background-color: $color-white;
     border: 2px solid;
 
     &:hover {
-      color: #ffffff;
-      background-color: rgb(217, 0, 0);
+      color: $color-white;
+      background-color: $color-red;
     }
 
     @include tablet {
